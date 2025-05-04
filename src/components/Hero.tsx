@@ -96,7 +96,7 @@ const Hero = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/80 dark:border-white/10 shadow-2xl relative z-10">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-60"></div>
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                src="https://i.postimg.cc/Lh7PKMfy/IMG-20240229-181257-384.jpg" 
                 alt="Keerthan Kumar M" 
                 className="w-full h-full object-cover"
               />
