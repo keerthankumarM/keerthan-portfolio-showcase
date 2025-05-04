@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -78,19 +78,27 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="section-container">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-background via-primary/5 to-background -z-10"></div>
+      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
+      
+      <div className="section-container relative z-10">
         <h2 className="section-title">Get In Touch</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Have a question or want to collaborate on a project? Feel free to reach out using the form below or through my contact information.
         </p>
         
         <div className="grid lg:grid-cols-2 gap-8">
-          <Card>
-            <CardContent className="pt-6">
+          <Card className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden relative">
+            <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-primary/20 to-transparent rounded-bl-full"></div>
+            <div className="absolute bottom-0 left-0 h-32 w-32 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-tr-full"></div>
+            
+            <CardContent className="pt-6 relative z-10">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-foreground/80">
                     Name
                   </label>
                   <Input
@@ -101,11 +109,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    className="bg-white/50 dark:bg-background/50 border-primary/20 focus-visible:ring-primary/50"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-foreground/80">
                     Email
                   </label>
                   <Input
@@ -116,11 +125,12 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="bg-white/50 dark:bg-background/50 border-primary/20 focus-visible:ring-primary/50"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-foreground/80">
                     Message
                   </label>
                   <Textarea
@@ -131,10 +141,12 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    className="bg-white/50 dark:bg-background/50 border-primary/20 focus-visible:ring-primary/50"
                   />
                 </div>
                 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full group relative overflow-hidden">
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
                   Send Message
                 </Button>
               </form>
@@ -142,38 +154,45 @@ const Contact = () => {
           </Card>
           
           <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-              <div className="grid gap-4">
-                {contactDetails.map((item, index) => (
-                  <a 
-                    key={index} 
-                    href={item.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-md hover:bg-muted transition-colors"
-                  >
-                    <div className="bg-primary/10 p-2 rounded-md">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">{item.label}</p>
-                      <p className="font-medium">{item.value}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+            <Card className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">Contact Information</h3>
+                <div className="grid gap-4">
+                  {contactDetails.map((item, index) => (
+                    <a 
+                      key={index} 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-3 rounded-md hover:bg-primary/5 transition-colors group"
+                    >
+                      <div className="bg-primary/10 p-2 rounded-md group-hover:scale-105 group-hover:bg-primary/20 transition-all">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="text-xs text-muted-foreground">{item.label}</p>
+                        <p className="font-medium group-hover:text-primary transition-colors">{item.value}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
             
-            <div>
-              <h3 className="text-xl font-bold mb-4">Let's Connect</h3>
-              <p className="text-muted-foreground mb-4">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
-              <p className="text-muted-foreground">
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-              </p>
-            </div>
+            <Card className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">Let's Connect</h3>
+                <div className="space-y-4 relative">
+                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-bl from-primary/10 via-blue-500/10 to-transparent rounded-full blur-xl"></div>
+                  <p className="text-muted-foreground relative z-10">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                  </p>
+                  <p className="text-muted-foreground relative z-10">
+                    Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

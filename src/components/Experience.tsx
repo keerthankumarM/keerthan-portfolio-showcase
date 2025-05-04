@@ -4,78 +4,129 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-secondary/30">
-      <div className="section-container">
+    <section id="experience" className="py-20 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-background to-transparent"></div>
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+      
+      <div className="section-container relative z-10">
         <h2 className="section-title">Experience</h2>
         
-        <div className="mt-12 grid gap-8">
-          <Card className="card-hover">
+        <div className="mt-12 grid gap-8 relative">
+          {/* Timeline connector */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden md:block"></div>
+          
+          <Card className="card-hover md:w-5/6 ml-auto relative backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10">
+            {/* Timeline dot */}
+            <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary hidden md:block"></div>
+            <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/20 animate-pulse hidden md:block"></div>
+            
             <CardHeader>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
-                  <Briefcase className="text-primary" />
+                  <div className="p-2 bg-primary/10 rounded-full">
+                    <Briefcase className="text-primary" />
+                  </div>
                   <CardTitle>Frontend Development Intern</CardTitle>
                 </div>
                 <CardDescription className="flex items-center gap-1">
-                  <Calendar size={14} />
+                  <Calendar size={14} className="text-primary" />
                   <span>April 2025 - May 2025</span>
                 </CardDescription>
               </div>
-              <CardDescription>Unified Mentor</CardDescription>
+              <CardDescription className="font-medium text-primary/80">Unified Mentor</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>
-                  Collaborated with a team of developers to create responsive and user-friendly web interfaces using React and Tailwind CSS
+              <ul className="space-y-2 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Collaborated with a team of developers to create responsive and user-friendly web interfaces using React and Tailwind CSS
+                  </span>
                 </li>
-                <li>
-                  Implemented interactive components and optimized front-end performance leading to 25% faster page load times
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Implemented interactive components and optimized front-end performance leading to 25% faster page load times
+                  </span>
                 </li>
-                <li>
-                  Participated in code reviews and daily stand-up meetings, contributing to the improvement of development workflows
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Participated in code reviews and daily stand-up meetings, contributing to the improvement of development workflows
+                  </span>
                 </li>
-                <li>
-                  Developed and maintained documentation for front-end components and design systems
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Developed and maintained documentation for front-end components and design systems
+                  </span>
                 </li>
-                <li>
-                  Assisted in troubleshooting cross-browser compatibility issues and implementing UI/UX improvements based on user feedback
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Assisted in troubleshooting cross-browser compatibility issues and implementing UI/UX improvements based on user feedback
+                  </span>
                 </li>
               </ul>
             </CardContent>
           </Card>
           
-          <Card className="card-hover">
+          <Card className="card-hover md:w-5/6 mr-auto relative backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10">
+            {/* Timeline dot */}
+            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary hidden md:block"></div>
+            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/20 animate-pulse hidden md:block"></div>
+            
             <CardHeader>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
-                  <svg className="h-5 w-5 text-primary" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 7V31M7 19H31M7 7H31V31H7V7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <div className="p-2 bg-primary/10 rounded-full">
+                    <svg className="h-5 w-5 text-primary" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 7V31M7 19H31M7 7H31V31H7V7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                   <CardTitle>IEEE Member</CardTitle>
                 </div>
                 <CardDescription className="flex items-center gap-1">
-                  <Calendar size={14} />
+                  <Calendar size={14} className="text-primary" />
                   <span>2025 - Present</span>
                 </CardDescription>
               </div>
-              <CardDescription>IEEE Student Branch</CardDescription>
+              <CardDescription className="font-medium text-primary/80">IEEE Student Branch</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>
-                  Active member of the IEEE Student Branch, participating in technical workshops and events
+              <ul className="space-y-2 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Active member of the IEEE Student Branch, participating in technical workshops and events
+                  </span>
                 </li>
-                <li>
-                  Collaborated with peers on research initiatives focused on emerging technologies
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Collaborated with peers on research initiatives focused on emerging technologies
+                  </span>
                 </li>
-                <li>
-                  Attended seminars and conferences to stay updated with the latest advancements in computer science and data science
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Attended seminars and conferences to stay updated with the latest advancements in computer science and data science
+                  </span>
                 </li>
-                <li>
-                  Participated in networking events, connecting with industry professionals and academic researchers
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Participated in networking events, connecting with industry professionals and academic researchers
+                  </span>
                 </li>
-                <li>
-                  Contributed to community outreach programs aimed at promoting STEM education
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Contributed to community outreach programs aimed at promoting STEM education
+                  </span>
                 </li>
               </ul>
             </CardContent>
