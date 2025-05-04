@@ -1,12 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
+import Services from '@/components/Services';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import { useEffect } from 'react';
 
 const Index = () => {
+  // Add smooth scroll behavior for navigation
+  useEffect(() => {
+    const handleLinkClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        const href = target.getAttribute('href');
+        if (!href) return;
+        
+        const element = document.querySelector(href);
+        if (element) {
+          e.preventDefault();
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+    
+    document.addEventListener('click', handleLinkClick);
+    return () => document.removeEventListener('click', handleLinkClick);
+  }, []);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Services />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 };
