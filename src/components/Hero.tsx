@@ -95,8 +95,8 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl animate-pulse"></div>
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl relative z-10 bg-background">
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Professional Software Developer" 
+                src="https://i.postimg.cc/Lh7PKMfy/IMG-20240229-181257-384.jpg" 
+                alt="Keerthan Kumar M" 
                 className="w-full h-full object-cover object-center"
               />
             </div>
