@@ -2,15 +2,13 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/a0ee68ad-7fe8-4276-abc7-6403304e4b29
-
+Simply visit the [Live Demo](https://keerthan-portfolio-showcase.lovable.app/) and start prompting.
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Live Demo](https://keerthan-portfolio-showcase.lovable.app/) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
