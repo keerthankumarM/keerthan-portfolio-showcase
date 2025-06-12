@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { ArrowDown, Sparkles, Code2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -72,33 +71,37 @@ const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent leading-tight">
                 Keerthan Kumar M
               </h1>
-              <div className="text-xl md:text-2xl font-medium text-slate-300 mb-6">
-                <span className="relative inline-block group">
-                  <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
-                    Software Developer
+              <div className="text-xl md:text-2xl font-medium text-slate-300 mb-6 min-h-[3rem] flex items-center justify-center md:justify-start">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                  <span className="relative inline-block group">
+                    <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
+                      Software Developer
+                    </span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                   </span>
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </span>
-                <span className="mx-3 text-purple-300">•</span>
-                <span className="relative inline-block group">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Data Science Enthusiast
+                  <span className="text-purple-300">•</span>
+                  <span className="relative inline-block group">
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      Data Science Enthusiast
+                    </span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                   </span>
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </span>
+                </div>
               </div>
             </div>
             
-            <div className="relative h-16 md:h-12 p-4 bg-slate-800/50 border border-purple-500/20 rounded-xl backdrop-blur-sm shadow-lg">
+            <div className="relative min-h-[4rem] p-4 bg-slate-800/50 border border-purple-500/20 rounded-xl backdrop-blur-sm shadow-lg">
               <div className="absolute top-2 left-3 flex gap-1">
                 <div className="w-2 h-2 rounded-full bg-red-400"></div>
                 <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
                 <div className="w-2 h-2 rounded-full bg-green-400"></div>
               </div>
-              <p className="font-mono text-sm md:text-base text-slate-200 mt-4">
-                <span className="text-purple-400">→</span> {typingText}
-                <span className="animate-blink-caret border-r-2 border-purple-400 ml-1"></span>
-              </p>
+              <div className="mt-4 min-h-[2rem] flex items-start">
+                <p className="font-mono text-sm md:text-base text-slate-200 break-words">
+                  <span className="text-purple-400">→</span> {typingText}
+                  <span className="animate-blink-caret border-r-2 border-purple-400 ml-1"></span>
+                </p>
+              </div>
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
