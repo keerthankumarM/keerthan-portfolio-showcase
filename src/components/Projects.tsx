@@ -19,7 +19,7 @@ const Projects = () => {
       ],
       links: {
         github: 'https://github.com/keerthankumarM/super-mall',
-        live: '#'
+        live: 'https://github.com/keerthankumarM/super-mall'
       }
     },
     {
@@ -35,7 +35,7 @@ const Projects = () => {
       ],
       links: {
         github: 'https://github.com/keerthankumarM/hospital-scheduler',
-        live: '#'
+        live: 'https://github.com/keerthankumarM/hospital-scheduler'
       }
     },
     {
@@ -51,10 +51,14 @@ const Projects = () => {
       ],
       links: {
         github: 'https://github.com/keerthankumarM/data-viz-dashboard',
-        live: '#'
+        live: 'https://github.com/keerthankumarM/data-viz-dashboard'
       }
     }
   ];
+
+  const handleLinkClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="projects" className="py-20 bg-background relative overflow-hidden">
@@ -71,7 +75,7 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="card-hover overflow-hidden flex flex-col backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20 group">
+            <Card key={index} className="card-hover overflow-hidden flex flex-col backdrop-blur-sm bg-background/95 dark:bg-card/95 border-primary/30 group">
               <div className="h-48 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                 <img 
@@ -107,18 +111,23 @@ const Projects = () => {
               </CardContent>
               
               <CardFooter className="flex justify-between border-t border-border/30 pt-4">
-                <Button variant="outline" size="sm" asChild className="group/btn border-primary/20">
-                  <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                    <Github size={14} className="transition-transform duration-300 group-hover/btn:rotate-12" />
-                    <span>Code</span>
-                  </a>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => handleLinkClick(project.links.github)}
+                  className="group/btn border-primary/20"
+                >
+                  <Github size={14} className="transition-transform duration-300 group-hover/btn:rotate-12 mr-1" />
+                  <span>Code</span>
                 </Button>
-                <Button size="sm" asChild className="group/btn relative overflow-hidden">
-                  <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                    <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-primary/80 opacity-0 group-hover/btn:opacity-100 transition-opacity -z-10"></span>
-                    <ExternalLink size={14} className="transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:translate-y-[-1px]" />
-                    <span>Demo</span>
-                  </a>
+                <Button 
+                  size="sm" 
+                  onClick={() => handleLinkClick(project.links.live)}
+                  className="group/btn relative overflow-hidden"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-primary/80 opacity-0 group-hover/btn:opacity-100 transition-opacity -z-10"></span>
+                  <ExternalLink size={14} className="transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:translate-y-[-1px] mr-1" />
+                  <span>View</span>
                 </Button>
               </CardFooter>
             </Card>
@@ -126,12 +135,14 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button asChild variant="outline" className="group relative overflow-hidden border-primary/20 hover:border-primary/50">
-            <a href="https://github.com/keerthankumarM" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <span className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
-              <Github size={16} className="transition-transform duration-300 group-hover:rotate-12" />
-              <span>See more projects on GitHub</span>
-            </a>
+          <Button 
+            variant="outline" 
+            onClick={() => handleLinkClick('https://github.com/keerthankumarM')}
+            className="group relative overflow-hidden border-primary/20 hover:border-primary/50"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
+            <Github size={16} className="transition-transform duration-300 group-hover:rotate-12 mr-2" />
+            <span>See more projects on GitHub</span>
           </Button>
         </div>
       </div>
