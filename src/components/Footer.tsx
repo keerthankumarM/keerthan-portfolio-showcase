@@ -22,7 +22,7 @@ const Footer = () => {
               <Github />
             </a>
             <a 
-              href="https://www.linkedin.com/in/keerthan-kumar-m-595402272/" 
+              href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BTRm3OA7QTPKuC29fg8rpbg%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-background/80 hover:text-white transition-colors"
