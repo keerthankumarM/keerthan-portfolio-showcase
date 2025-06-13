@@ -14,13 +14,13 @@ const About = () => {
         <h2 className="section-title">About Me</h2>
         
         <div className="grid md:grid-cols-3 gap-8 mt-12">
-          <Card className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden relative group">
+          <Card className="card-hover backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20 overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-background/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <CardContent className="pt-6 text-center relative z-10">
-              <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <User className="text-primary" size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-2">My Background</h3>
+              <h3 className="text-xl font-bold mb-2 text-foreground">My Background</h3>
               <p className="text-muted-foreground">
                 Passionate software developer with a keen interest in algorithmic problem-solving 
                 and clean code practices.
@@ -28,13 +28,13 @@ const About = () => {
             </CardContent>
           </Card>
           
-          <Card className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden relative group">
+          <Card className="card-hover backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20 overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-background/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <CardContent className="pt-6 text-center relative z-10">
-              <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Book className="text-primary" size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-2">Education</h3>
+              <h3 className="text-xl font-bold mb-2 text-foreground">Education</h3>
               <p className="text-muted-foreground">
                 Bachelor of Engineering (B.E),<br />
                 Computer Science (Data Science)<br />
@@ -43,13 +43,13 @@ const About = () => {
             </CardContent>
           </Card>
           
-          <Card className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden relative group">
+          <Card className="card-hover backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20 overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-background/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <CardContent className="pt-6 text-center relative z-10">
-              <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Briefcase className="text-primary" size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-2">Experience</h3>
+              <h3 className="text-xl font-bold mb-2 text-foreground">Experience</h3>
               <p className="text-muted-foreground">
                 Frontend Development Intern<br />
                 IEEE Member and active participant in<br />
@@ -59,7 +59,7 @@ const About = () => {
           </Card>
         </div>
         
-        <div className="mt-16 backdrop-blur-sm bg-white/50 dark:bg-background/50 border border-primary/10 rounded-xl p-8 shadow-lg relative overflow-hidden">
+        <div className="mt-16 backdrop-blur-sm bg-background/90 dark:bg-card/90 border border-primary/20 rounded-xl p-8 shadow-lg relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-primary/20 to-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-gradient-to-tr from-primary/20 to-blue-500/10 rounded-full blur-3xl"></div>
           

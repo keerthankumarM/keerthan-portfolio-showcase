@@ -79,7 +79,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden">
+    <section id="services" className="py-20 relative overflow-hidden bg-background">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background -z-10"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
@@ -93,23 +93,23 @@ const Services = () => {
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="card-hover backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 overflow-hidden relative group">
+            <Card key={index} className="card-hover backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20 overflow-hidden relative group">
               {/* Gradient background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
               
               <CardHeader>
                 <div className="mb-4 flex justify-center">
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-white/80 to-white/30 dark:from-background/80 dark:to-background/30 shadow-inner group-hover:scale-105 transition-transform duration-300">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-background/80 to-background/30 shadow-inner group-hover:scale-105 transition-transform duration-300">
                     {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-center group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{service.title}</CardTitle>
-                <CardDescription className="text-center">{service.description}</CardDescription>
+                <CardTitle className="text-center group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 text-foreground">{service.title}</CardTitle>
+                <CardDescription className="text-center text-muted-foreground">{service.description}</CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-2">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm group-hover:translate-x-1 transition-transform duration-300">
+                    <li key={i} className="flex items-center gap-2 text-sm group-hover:translate-x-1 transition-transform duration-300 text-muted-foreground">
                       <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0"></span>
                       <span>{feature}</span>
                     </li>

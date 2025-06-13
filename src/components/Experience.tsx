@@ -4,9 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+    <section id="experience" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-background to-transparent"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none"></div>
       <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -18,7 +17,7 @@ const Experience = () => {
           {/* Timeline connector */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden md:block"></div>
           
-          <Card className="card-hover md:w-5/6 ml-auto relative backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10">
+          <Card className="card-hover md:w-5/6 ml-auto relative backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20">
             {/* Timeline dot */}
             <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary hidden md:block"></div>
             <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/20 animate-pulse hidden md:block"></div>
@@ -26,12 +25,12 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 bg-primary/10 rounded-full">
+                  <div className="p-2 bg-primary/20 rounded-full">
                     <Briefcase className="text-primary" />
                   </div>
-                  <CardTitle>Frontend Development Intern</CardTitle>
+                  <CardTitle className="text-foreground">Frontend Development Intern</CardTitle>
                 </div>
-                <CardDescription className="flex items-center gap-1">
+                <CardDescription className="flex items-center gap-1 text-muted-foreground">
                   <Calendar size={14} className="text-primary" />
                   <span>April 2025 - May 2025</span>
                 </CardDescription>
@@ -74,7 +73,7 @@ const Experience = () => {
             </CardContent>
           </Card>
           
-          <Card className="card-hover md:w-5/6 mr-auto relative backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10">
+          <Card className="card-hover md:w-5/6 mr-auto relative backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20">
             {/* Timeline dot */}
             <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary hidden md:block"></div>
             <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/20 animate-pulse hidden md:block"></div>
@@ -82,14 +81,14 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 bg-primary/10 rounded-full">
+                  <div className="p-2 bg-primary/20 rounded-full">
                     <svg className="h-5 w-5 text-primary" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 7V31M7 19H31M7 7H31V31H7V7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <CardTitle>IEEE Member</CardTitle>
+                  <CardTitle className="text-foreground">IEEE Member</CardTitle>
                 </div>
-                <CardDescription className="flex items-center gap-1">
+                <CardDescription className="flex items-center gap-1 text-muted-foreground">
                   <Calendar size={14} className="text-primary" />
                   <span>2025 - Present</span>
                 </CardDescription>

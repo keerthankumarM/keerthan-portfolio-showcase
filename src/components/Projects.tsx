@@ -57,11 +57,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+    <section id="projects" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none"></div>
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-secondary/30 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent"></div>
       <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
       
@@ -73,7 +71,7 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="card-hover overflow-hidden flex flex-col backdrop-blur-sm bg-white/50 dark:bg-background/50 border-primary/10 group">
+            <Card key={index} className="card-hover overflow-hidden flex flex-col backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20 group">
               <div className="h-48 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                 <img 
@@ -91,16 +89,16 @@ const Projects = () => {
               </div>
               
               <CardHeader>
-                <CardTitle className="group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <CardTitle className="group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 text-foreground">
                   {project.title}
                 </CardTitle>
               </CardHeader>
               
               <CardContent className="flex-grow">
-                <CardDescription className="mb-4">{project.description}</CardDescription>
+                <CardDescription className="mb-4 text-muted-foreground">{project.description}</CardDescription>
                 <ul className="space-y-1">
                   {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs group-hover:translate-x-1 transition-transform duration-300">
+                    <li key={i} className="flex items-center gap-2 text-xs group-hover:translate-x-1 transition-transform duration-300 text-muted-foreground">
                       <ArrowRight size={12} className="text-primary" />
                       <span>{feature}</span>
                     </li>
@@ -109,7 +107,7 @@ const Projects = () => {
               </CardContent>
               
               <CardFooter className="flex justify-between border-t border-border/30 pt-4">
-                <Button variant="outline" size="sm" asChild className="group/btn">
+                <Button variant="outline" size="sm" asChild className="group/btn border-primary/20">
                   <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                     <Github size={14} className="transition-transform duration-300 group-hover/btn:rotate-12" />
                     <span>Code</span>
