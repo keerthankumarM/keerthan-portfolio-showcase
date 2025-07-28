@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Phone, Linkedin, Github, Code, BookOpen } from 'lucide-react';
+import { Mail, Phone, Github, Code, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -27,12 +27,6 @@ const Contact = () => {
       label: 'Phone',
       value: '+91 7975548704',
       link: 'tel:+917975548704'
-    },
-    {
-      icon: <Linkedin className="h-5 w-5 text-primary" />,
-      label: 'LinkedIn',
-      value: 'keerthan-kumar-m',
-      link: 'https://linkedin.com/in/keerthan-kumar-m'
     },
     {
       icon: <Github className="h-5 w-5 text-primary" />,
