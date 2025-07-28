@@ -7,51 +7,19 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: 'Super Mall Web Application',
-      description: 'A comprehensive web application for mall management with real-time offer tracking and product management capabilities.',
-      image: 'https://images.unsplash.com/photo-1607083206968-13611e3d76db',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Express'],
+      title: 'Weather App',
+      description: 'A modern weather application that provides real-time weather information with beautiful UI and interactive features.',
+      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b',
+      techStack: ['React', 'TypeScript', 'Weather API', 'Tailwind CSS'],
       features: [
-        'Real-time offer management',
-        'Product inventory tracking',
-        'Admin dashboard',
-        'User authentication'
+        'Real-time weather data',
+        'Location-based forecasts',
+        'Interactive weather maps',
+        'Responsive design'
       ],
       links: {
-        github: 'https://github.com/keerthankumarM/super-mall',
-        live: 'https://github.com/keerthankumarM/super-mall'
-      }
-    },
-    {
-      title: 'Operation Scheduler for Hospital Management',
-      description: 'An intelligent scheduling system for hospital operations that optimizes doctor and facility availability.',
-      image: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b',
-      techStack: ['Python', 'Django', 'PostgreSQL', 'Chart.js'],
-      features: [
-        'Scheduling automation',
-        'Patient record management',
-        'Doctor availability tracking',
-        'Resource optimization'
-      ],
-      links: {
-        github: 'https://github.com/keerthankumarM/hospital-scheduler',
-        live: 'https://github.com/keerthankumarM/hospital-scheduler'
-      }
-    },
-    {
-      title: 'Data Visualization Dashboard',
-      description: 'Interactive data visualization platform that transforms complex datasets into meaningful insights.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-      techStack: ['D3.js', 'React', 'TypeScript', 'Material UI'],
-      features: [
-        'Interactive charts',
-        'Data filtering',
-        'Customizable views',
-        'Export capabilities'
-      ],
-      links: {
-        github: 'https://github.com/keerthankumarM/data-viz-dashboard',
-        live: 'https://github.com/keerthankumarM/data-viz-dashboard'
+        github: 'https://github.com/keerthankumarM/weather-app',
+        live: 'https://github.com/keerthankumarM/weather-app'
       }
     }
   ];
