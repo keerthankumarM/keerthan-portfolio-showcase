@@ -61,20 +61,38 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a backend service
-    console.log('Form submitted:', formData);
+    
+    // Validate form data
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Create mailto link with form data
+    const subject = `Contact from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoLink = `mailto:keerthankumarmm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
     
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Opening email client...",
+      description: "Your email client will open with the pre-filled message.",
     });
     
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    // Reset form after a short delay
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    }, 1000);
   };
 
   return (
