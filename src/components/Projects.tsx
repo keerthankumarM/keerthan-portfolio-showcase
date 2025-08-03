@@ -19,7 +19,7 @@ const Projects = () => {
       ],
       links: {
         github: 'https://github.com/keerthankumarM/weather-app',
-        live: 'https://weather-app-demo.vercel.app'
+        live: 'https://myweatherspot.netlify.app/'
       }
     }
   ];
