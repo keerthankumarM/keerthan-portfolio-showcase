@@ -21,38 +21,6 @@ const Projects = () => {
         github: 'https://github.com/keerthankumarM/weather-app',
         live: 'https://myweatherspot.netlify.app/'
       }
-    },
-    {
-      title: 'Task Management App',
-      description: 'A comprehensive task management application with drag-and-drop functionality and real-time collaboration.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      features: [
-        'Drag & drop interface',
-        'Real-time collaboration',
-        'Project categorization',
-        'Progress tracking'
-      ],
-      links: {
-        github: 'https://github.com/keerthankumarM/task-manager',
-        live: 'https://task-manager-demo.netlify.app'
-      }
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration and inventory management.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d',
-      techStack: ['React', 'Express.js', 'PostgreSQL', 'Stripe API'],
-      features: [
-        'Payment processing',
-        'Inventory management',
-        'User authentication',
-        'Order tracking'
-      ],
-      links: {
-        github: 'https://github.com/keerthankumarM/ecommerce-platform',
-        live: 'https://ecommerce-demo.netlify.app'
-      }
     }
   ];
 
