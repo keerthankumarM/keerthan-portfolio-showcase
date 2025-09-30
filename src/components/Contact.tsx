@@ -9,7 +9,6 @@ import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -84,46 +83,24 @@ const Contact = () => {
       return;
     }
 
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://a0ee68ad-7fe8-4276-abc7-6403304e4b29.supabase.co/functions/v1/send-contact-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          message: formData.message.trim()
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
-
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
-    } catch (error: any) {
-      console.error("Error sending message:", error);
-      toast({
-        title: "Failed to send message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Create WhatsApp message
+    const whatsappMessage = `Hi! I'm ${formData.name.trim()}\n\nEmail: ${formData.email.trim()}\n\nMessage: ${formData.message.trim()}`;
+    const whatsappUrl = `https://wa.me/917975548704?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    toast({
+      title: "Opening WhatsApp...",
+      description: "You can send your message directly via WhatsApp!",
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
 
   return (
@@ -194,9 +171,9 @@ const Contact = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full group relative overflow-hidden" disabled={isSubmitting}>
+                <Button type="submit" className="w-full group relative overflow-hidden">
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  Send via WhatsApp
                 </Button>
               </form>
             </CardContent>
