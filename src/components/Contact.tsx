@@ -6,7 +6,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -88,16 +87,20 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      const response = await fetch('https://a0ee68ad-7fe8-4276-abc7-6403304e4b29.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim(),
           message: formData.message.trim()
-        }
+        })
       });
 
-      if (error) {
-        throw error;
+      if (!response.ok) {
+        throw new Error('Failed to send message');
       }
 
       toast({
