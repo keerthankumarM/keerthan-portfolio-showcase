@@ -23,18 +23,6 @@ const Skills = () => {
       description: 'Database design and management'
     },
     { 
-      name: 'Docker', 
-      proficiency: 75, 
-      icon: '🐳',
-      description: 'Container creation and management'
-    },
-    { 
-      name: 'React', 
-      proficiency: 70, 
-      icon: '⚛️',
-      description: 'Frontend application development'
-    },
-    { 
       name: 'Data Visualization', 
       proficiency: 80, 
       icon: '📊',
