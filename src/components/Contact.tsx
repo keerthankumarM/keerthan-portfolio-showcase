@@ -87,7 +87,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://a0ee68ad-7fe8-4276-abc7-6403304e4b29.supabase.co/functions/v1/send-contact-email', {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
