@@ -135,11 +135,11 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/40 via-pink-500/30 to-blue-500/40 rounded-full blur-2xl animate-pulse group-hover:scale-110 transition-transform duration-500"></div>
             <div className="absolute -inset-4 bg-gradient-to-br from-teal-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-xl animate-pulse delay-700"></div>
             
-            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gradient-to-r from-purple-400 via-pink-400 to-blue-400 shadow-2xl relative z-10 bg-slate-800 group-hover:scale-105 transition-transform duration-300">
+            <div className="w-80 h-96 md:w-96 md:h-[28rem] rounded-3xl overflow-hidden border-4 border-gradient-to-r from-purple-400 via-pink-400 to-blue-400 shadow-2xl relative z-10 bg-slate-800 group-hover:scale-105 transition-transform duration-300">
               <img 
                 src="https://i.postimg.cc/PqqdGySg/IMG-20250522-WA0019.jpg" 
                 alt="Keerthan Kumar M" 
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter brightness-110 contrast-110 saturate-110"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300 filter brightness-110 contrast-110 saturate-110"
                 style={{ imageRendering: 'crisp-edges' }}
               />
             </div>
