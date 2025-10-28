@@ -137,7 +137,7 @@ const Hero = () => {
             
             <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gradient-to-r from-purple-400 via-pink-400 to-blue-400 shadow-2xl relative z-10 bg-slate-800 group-hover:scale-105 transition-transform duration-300">
               <img 
-                src="https://i.postimg.cc/Lh7PKMfy/IMG-20240229-181257-384.jpg" 
+                src="https://i.postimg.cc/PqqdGySg/IMG-20250522-WA0019.jpg" 
                 alt="Keerthan Kumar M" 
                 className="w-full h-full object-cover object-top scale-110 group-hover:scale-125 transition-transform duration-300 filter brightness-110 contrast-110 saturate-110"
                 style={{ imageRendering: 'crisp-edges' }}
