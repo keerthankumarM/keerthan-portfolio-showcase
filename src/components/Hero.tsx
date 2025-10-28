@@ -139,7 +139,7 @@ const Hero = () => {
               <img 
                 src="https://i.postimg.cc/PqqdGySg/IMG-20250522-WA0019.jpg" 
                 alt="Keerthan Kumar M" 
-                className="w-full h-full object-cover object-top scale-110 group-hover:scale-125 transition-transform duration-300 filter brightness-110 contrast-110 saturate-110"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter brightness-110 contrast-110 saturate-110"
                 style={{ imageRendering: 'crisp-edges' }}
               />
             </div>
