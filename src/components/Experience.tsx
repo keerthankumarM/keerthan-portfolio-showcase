@@ -1,5 +1,5 @@
 
-import { Calendar, Briefcase } from 'lucide-react';
+import { Calendar, GitFork, GraduationCap, Cpu } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Experience = () => {
@@ -28,7 +28,7 @@ const Experience = () => {
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <div className="p-2 bg-primary/20 rounded-full">
-                    <Briefcase className="text-primary" />
+                    <GitFork className="text-primary" />
                   </div>
                   <CardTitle className="text-foreground">Frontend Engineer Intern</CardTitle>
                 </div>
@@ -79,7 +79,7 @@ const Experience = () => {
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <div className="p-2 bg-primary/20 rounded-full">
-                    <Briefcase className="text-primary" />
+                    <GraduationCap className="text-primary" />
                   </div>
                   <CardTitle className="text-foreground">Frontend Development Intern</CardTitle>
                 </div>
@@ -129,9 +129,7 @@ const Experience = () => {
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <div className="p-2 bg-primary/20 rounded-full">
-                    <svg className="h-5 w-5 text-primary" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19 7V31M7 19H31M7 7H31V31H7V7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <Cpu className="text-primary h-5 w-5" />
                   </div>
                   <CardTitle className="text-foreground">IEEE Member</CardTitle>
                 </div>
