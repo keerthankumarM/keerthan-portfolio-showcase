@@ -17,10 +17,62 @@ const Experience = () => {
           {/* Timeline connector */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden md:block"></div>
           
+          {/* Fork Technologies - Most Recent */}
           <Card className="card-hover md:w-5/6 ml-auto relative backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20">
             {/* Timeline dot */}
             <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary hidden md:block"></div>
             <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/20 animate-pulse hidden md:block"></div>
+            
+            <CardHeader>
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="p-2 bg-primary/20 rounded-full">
+                    <Briefcase className="text-primary" />
+                  </div>
+                  <CardTitle className="text-foreground">Frontend Engineer Intern</CardTitle>
+                </div>
+                <CardDescription className="flex items-center gap-1 text-muted-foreground">
+                  <Calendar size={14} className="text-primary" />
+                  <span>July 2025 - October 2025</span>
+                </CardDescription>
+              </div>
+              <CardDescription className="font-medium text-primary/80">Fork Technologies Pvt. Ltd.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Worked with the Frontend engineering team to develop and maintain web applications
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Demonstrated eagerness to learn and strong problem-solving skills in daily development tasks
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Contributed positively to team collaboration with a professional and dedicated attitude
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+                  <span>
+                    Gained hands-on experience in building scalable frontend solutions
+                  </span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+          
+          {/* Unified Mentor */}
+          <Card className="card-hover md:w-5/6 mr-auto relative backdrop-blur-sm bg-background/90 dark:bg-card/90 border-primary/20">
+            {/* Timeline dot */}
+            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary hidden md:block"></div>
+            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary/20 animate-pulse hidden md:block"></div>
             
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-2">
@@ -61,12 +113,6 @@ const Experience = () => {
                   <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
                   <span>
                     Developed and maintained documentation for front-end components and design systems
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
-                  <span>
-                    Assisted in troubleshooting cross-browser compatibility issues and implementing UI/UX improvements based on user feedback
                   </span>
                 </li>
               </ul>
