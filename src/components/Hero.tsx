@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowDown, Sparkles, Code2 } from 'lucide-react';
+import { ArrowDown, Sparkles, Code2, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -123,6 +123,16 @@ const Hero = () => {
                 <a href="#projects">
                   <Code2 className="mr-2 h-5 w-5" />
                   View Projects
+                </a>
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-teal-400/30 hover:border-teal-400/60 bg-slate-800/30 hover:bg-slate-700/50 text-teal-300 hover:text-teal-200 shadow-xl backdrop-blur-sm px-8 py-3 text-lg" 
+                asChild
+              >
+                <a href="/keerthan-resume.pdf" download="Keerthan_Kumar_Resume.pdf">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
                 </a>
               </Button>
             </div>
