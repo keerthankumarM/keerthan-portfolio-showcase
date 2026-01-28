@@ -12,6 +12,7 @@ const Experience = () => {
       
       <div className="section-container relative z-10">
         <h2 className="section-title">Experience</h2>
+        {/* Updated: Fork Technologies added */}
         
         <div className="mt-12 grid gap-8 relative">
           {/* Timeline connector */}
