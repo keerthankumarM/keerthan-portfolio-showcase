@@ -1,5 +1,5 @@
 
-import { Calendar, GitFork, GraduationCap, Cpu } from 'lucide-react';
+import { Calendar, GitFork } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Experience = () => {
@@ -78,8 +78,8 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 bg-primary/20 rounded-full">
-                    <GraduationCap className="text-primary" />
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-800 flex items-center justify-center">
+                    <img src="/logos/unified-mentor.svg" alt="Unified Mentor" className="w-6 h-6 object-contain" />
                   </div>
                   <CardTitle className="text-foreground">Frontend Development Intern</CardTitle>
                 </div>
@@ -128,8 +128,8 @@ const Experience = () => {
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 bg-primary/20 rounded-full">
-                    <Cpu className="text-primary h-5 w-5" />
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center p-1">
+                    <img src="/logos/ieee.png" alt="IEEE" className="w-full h-full object-contain" />
                   </div>
                   <CardTitle className="text-foreground">IEEE Member</CardTitle>
                 </div>
